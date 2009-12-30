@@ -50,6 +50,8 @@ For example, to use your standard application layout, create a `config/initializ
 You can also add before_filters to protect the controller from outsiders:
 
     Behavior::Settings.before_filters << 'require_admin_user'
+    
+By default, in production, `/admin/pages` is protected. You can disable this protection by re-initializing `Behavior::Settings.before_filters` or by setting `Behavior::Settings.allow_anonymous` to true.
 
 Running the tests
 =================
