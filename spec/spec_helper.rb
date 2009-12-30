@@ -9,6 +9,7 @@ plugin_spec_dir = File.dirname(__FILE__)
 ActiveRecord::Base.logger = Logger.new(plugin_spec_dir + "/debug.log")
 
 require File.expand_path(File.join(Rails.root, 'config/environment.rb')) unless defined?(ActiveRecord::Base)
+require 'spec/blueprints'
 
 def load_schema
   config = YAML::load(IO.read(File.dirname(__FILE__) + '/database.yml'))
