@@ -24,5 +24,24 @@ class Admin::PagesController < ApplicationController
       render :new
     end
   end
+  
+  def edit
+    @page = Page.find(params[:id])
+  end
+  
+  def update
+    @page = Page.find(params[:id])
+    if @page.update_attributes(params[:page])
+      redirect_to admin_pages_path
+    else
+      render :edit
+    end
+  end
+  
+  def destroy
+    @page = Page.find(params[:id])
+    @page.destroy
+    redirect_to admin_pages_path
+  end
 
 end

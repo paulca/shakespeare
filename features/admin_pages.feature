@@ -3,10 +3,31 @@ Feature: Managing Pages
   As an admin
   I want to add, edit and delete pages
   
-  Scenario: Pages Manager
+  Scenario: I'm on the admin layout
     When I am on the pages admin page
     Then I should see "Admin"
+  
+  Scenario: New Page
+    Given I am on the pages admin page
     When I follow "Add a New Page"
       And I fill in "Title" with "Harry and the Hendersons"
       And I press "Save"
     Then I should see "Harry and the Hendersons"
+    
+  Scenario: Edit Page
+    Given a page titled "Harry and the Hendersons"
+      And I am on the pages admin page
+    When I follow "Edit"
+      And I fill in "Title" with "Three Men and a Baby"
+      And I press "Save"
+    Then I should see "Three Men and a Baby"
+      And I should not see "Harry and the Hendersons"
+    
+  Scenario: Delete Page
+    Given a page titled "The Departed"
+    When I am on the pages admin page
+    Then I should see "The Departed"
+
+    When I follow "Delete"
+    Then I should not see "The Departed"
+      
