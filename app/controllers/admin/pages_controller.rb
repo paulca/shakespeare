@@ -1,9 +1,11 @@
 class Admin::PagesController < ApplicationController
   
-  layout Behavior::Settings.layout
-  Behavior::Settings.before_filters.each do |filter|
+  
+  Shakespeare::Settings.before_filters.each do |filter|
     before_filter filter
   end
+  
+  layout Shakespeare::Settings.layout
   
   def index
     @pages = Page.all

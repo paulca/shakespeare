@@ -1,3 +1,4 @@
+require 'shakespeare/shakespeare'
 require 'shakespeare/helpers'
 require 'shakespeare/settings'
 

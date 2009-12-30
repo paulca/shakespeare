@@ -10,7 +10,7 @@ module Shakespeare
       end
       
       def before_filters
-        @before_filters ||= []
+        @before_filters ||= ['protect_in_production']
       end
       
       def before_filters=(filters)
