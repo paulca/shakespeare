@@ -1,7 +1,5 @@
 Description:
-    Creates a migration to create a table to store application configuration called "behavior_configs"
-    
-    Also creates an empty config/behavior.yml to get you started
+    Creates a migration to create a table to store pages called "pages"
     
 Examples:
-    `./script/generate cucumber`
+    `./script/generate shakespeare`
