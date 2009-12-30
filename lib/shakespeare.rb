@@ -1,1 +1,1 @@
-# Shakespeare
+require 'helpers/shakespeare_helper'
