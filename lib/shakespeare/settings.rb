@@ -14,7 +14,7 @@ module Shakespeare
       end
       
       def before_filters=(filters)
-        @before_filters = filters
+        @before_filters << filters
       end
     end
   end
