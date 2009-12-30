@@ -45,13 +45,13 @@ By default, this comes with no styling, but you can create a layout in `app/layo
 
 For example, to use your standard application layout, create a `config/initializers/shakespeare.rb` like this:
 
-    Behavior::Settings.layout = 'application'
+    Shakespeare::Settings.layout = 'application'
 
 You can also add before_filters to protect the controller from outsiders:
 
-    Behavior::Settings.before_filters << 'require_admin_user'
+    Shakespeare::Settings.before_filters << 'require_admin_user'
     
-By default, in production, `/admin/pages` is protected. You can disable this protection by re-initializing `Behavior::Settings.before_filters` or by setting `Behavior::Settings.allow_anonymous` to true.
+By default, in production, if `Shakespeare::Settings.before_filters` is empty, `/admin/pages` is protected. You can disable this protection by setting `Behavior::Settings.allow_anonymous` to true.
 
 Running the tests
 =================

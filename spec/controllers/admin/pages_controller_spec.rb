@@ -16,10 +16,17 @@ describe Admin::PagesController do
     
     context "in production" do
       
-      it "shouldn't allow proceeding" do
+      it "shouldn't allow proceeding by default" do
         Shakespeare.stub!(:env).and_return('production')
         get :index
         response.body.should == 'Unauthorized'
+      end
+      
+      it "should allow proceeding if allow_anonymous is set" do
+        Shakespeare.stub!(:env).and_return('production')
+        Shakespeare::Settings.stub!(:allow_anonymous).and_return(true)
+        get :index
+        response.body.should_not == 'Unauthorized'
       end
       
     end

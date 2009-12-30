@@ -4,6 +4,7 @@ class Admin::PagesController < ApplicationController
   Shakespeare::Settings.before_filters.each do |filter|
     before_filter filter
   end
+  before_filter :protect_in_production if Shakespeare::Settings.before_filters.empty?
   
   layout Shakespeare::Settings.layout
   
