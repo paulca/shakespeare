@@ -16,6 +16,14 @@ module Shakespeare
       def before_filters=(filters)
         @before_filters << filters
       end
+      
+      def allow_anonymous
+        @before_filters ||= false
+      end
+      
+      def allow_anonymous=(boolean)
+        @allow_anonymous = boolean
+      end
     end
   end
   

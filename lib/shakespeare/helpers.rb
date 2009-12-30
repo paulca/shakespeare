@@ -10,7 +10,7 @@ module Shakespeare
     
     def protect_in_production
       return true unless Shakespeare.env == 'production'
-      render :text => 'Unauthorized'
+      render :text => 'Unauthorized' unless Shakespeare::Settings.allow_anonymous
     end
   end
 end
