@@ -1,6 +1,6 @@
 require 'spec/spec_helper.rb'
 
-describe ShakespeareHelper do
+describe Shakespeare::Helpers do
   
   class TestController < ApplicationController
   end

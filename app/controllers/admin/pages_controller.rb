@@ -1,5 +1,10 @@
 class Admin::PagesController < ApplicationController
   
+  layout Behavior::Settings.layout
+  Behavior::Settings.before_filters.each do |filter|
+    before_filter filter
+  end
+  
   def index
     @pages = Page.all
   end

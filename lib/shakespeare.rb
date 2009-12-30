@@ -1,3 +1,4 @@
-require 'helpers/shakespeare_helper'
+require 'shakespeare/helpers'
+require 'shakespeare/settings'
 
-ApplicationController.send("include", ShakespeareHelper)
+ApplicationController.send("include", Shakespeare::Helpers)

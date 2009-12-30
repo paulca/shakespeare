@@ -4,8 +4,9 @@ Feature: Managing Pages
   I want to add, edit and delete pages
   
   Scenario: Pages Manager
-   When I am on the pages admin page
-    And I follow "Add a New Page"
-    And I fill in "Title" with "Harry and the Hendersons"
-    And I press "Save"
-  Then I should see "Harry and the Hendersons"
+    When I am on the pages admin page
+    Then I should see "Admin"
+    When I follow "Add a New Page"
+      And I fill in "Title" with "Harry and the Hendersons"
+      And I press "Save"
+    Then I should see "Harry and the Hendersons"
