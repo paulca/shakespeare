@@ -3,7 +3,6 @@ require 'spec/spec_helper.rb'
 describe ShakespeareHelper do
   
   class TestController < ApplicationController
-    include ShakespeareHelper
   end
   
   describe "#page_content" do
