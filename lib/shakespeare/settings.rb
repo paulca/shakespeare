@@ -18,7 +18,7 @@ module Shakespeare
       end
       
       def allow_anonymous
-        @before_filters ||= false
+        @allow_anonymous ||= false
       end
       
       def allow_anonymous=(boolean)
