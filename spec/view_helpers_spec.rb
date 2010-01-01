@@ -12,12 +12,12 @@ describe Shakespeare::ViewHelpers do
     @page = Page.make_unsaved(
       :title => "Made Up",
       :description => "A description",
-      :keywords => "awesome, code"
+      :keywords => "awesome, code",
+      :canonical => "http://pabcas.com"
       )
   end
   
   context "no page" do
-    
     describe "#page_title" do
       it "should be nil" do
         page_title.should be_nil
@@ -34,6 +34,12 @@ describe Shakespeare::ViewHelpers do
     describe  "#keywords_meta_tag" do
       it "should be nil" do
         keywords_meta_tag.should be_nil
+      end
+    end
+    
+    describe  "#canonical_link_tag" do
+      it "should be nil" do
+        canonical_link_tag.should be_nil
       end
     end
   end
@@ -60,6 +66,22 @@ describe Shakespeare::ViewHelpers do
     describe "#keywords_meta_tag" do
       it "should generate the tag" do
         keywords_meta_tag.should == %Q[<meta name="keywords" content="awesome, code">]
+      end
+    end
+    
+    describe "#canonical_link_tag" do
+      context "active" do
+        it "should generate the tag" do
+          @page.stub!(:enable_canonical?).and_return(true)
+          
+          canonical_link_tag.should == %Q[<link href="http://pabcas.com" rel="canonical" />]
+        end
+      end
+      
+      context "inactive" do
+        it "should not generate the tag" do
+          canonical_link_tag.should be_nil
+        end
       end
     end
     

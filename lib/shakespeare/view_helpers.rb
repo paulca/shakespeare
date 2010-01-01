@@ -14,5 +14,11 @@ module Shakespeare
       return if page_content.nil? or page_content.keywords.blank?
       %Q[<meta name="keywords" content="#{page_content.keywords}">]
     end
+    
+    def canonical_link_tag
+      return if page_content.nil? or page_content.canonical.blank?
+      return unless page_content.enable_canonical?
+      %Q[<link href="#{page_content.canonical}" rel="canonical" />]
+    end
   end
 end
