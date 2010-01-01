@@ -44,6 +44,7 @@ In your views, you have access to a number of helpers for generating your page m
 - `page_title` is the title of the page
 - `keywords_meta_tag` generates a <meta> tag for the page keywords, or returns nil if it's left blank
 - `description_meta_tag` generates a <meta> tag for the page description, or returns nil if it's left blank
+- `robots_meta_tag` generates a <meta> tag for the robots no-index and/or nofollow meta tag options, or returns nil if it's left blank
 - `canonical_link_tag` generates a <link> tag with the canonical URL for the page, if `enable_canonical` is set to true
 
 Web Interface

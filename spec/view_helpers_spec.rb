@@ -13,7 +13,8 @@ describe Shakespeare::ViewHelpers do
       :title => "Made Up",
       :description => "A description",
       :keywords => "awesome, code",
-      :canonical => "http://pabcas.com"
+      :canonical => "http://pabcas.com",
+      :nofollow => true
       )
   end
   
@@ -34,6 +35,12 @@ describe Shakespeare::ViewHelpers do
     describe  "#keywords_meta_tag" do
       it "should be nil" do
         keywords_meta_tag.should be_nil
+      end
+    end
+    
+    describe  "#robots_meta_tag" do
+      it "should be nil" do
+        robots_meta_tag.should be_nil
       end
     end
     
@@ -66,6 +73,12 @@ describe Shakespeare::ViewHelpers do
     describe "#keywords_meta_tag" do
       it "should generate the tag" do
         keywords_meta_tag.should == %Q[<meta name="keywords" content="awesome, code">]
+      end
+    end
+    
+    describe "#robots_meta_tag" do
+      it "should generate the tag" do
+        robots_meta_tag.should == %Q[<meta name="robots" content="nofollow">]
       end
     end
     
