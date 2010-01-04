@@ -7,10 +7,10 @@
   </fieldset>
  
   <fieldset>
-    <%= f.label :title, "Title" %> <%= f.text_field :title %> <br />
-    <%= f.label :keywords, "Keywords" %>
-        
-    <%= f.label :canonical, "Robots" %>
+    <%= f.label :title, "Title" %> 
+    <%= f.text_field :title %> <br />
+  <fieldset>
+    <legend>Robots</legend>
     
     <%= f.check_box :noindex %>
     <%= f.label :noindex, "No-Index", :class => 'inline' %>
@@ -19,17 +19,19 @@
     <%= f.label :nofollow, "No-follow", :class => 'inline' %>
     
     <%= f.check_box :enable_canonical %>
-    <%= f.label :enable_canonical, "Canonical?", :class => 'inline' %>
+    <%= f.label :enable_canonical, "Set Canonical Tag?", :class => 'inline' %>
     
+    <%= f.label :canonical, "Canonical URL" %>
     <%= f.text_field :canonical %> <br />
  
  
     <%= f.label :description, "Description" %> <%= f.text_area :description, :class => "small-text" %> <br />
-    </fieldset>
-    
-    <fieldset>
-      <%= f.label :content, "Content" %> <%= f.text_area :content %> <br />
-    </fieldset>
+    <%= f.label :keywords, "Keywords" %> <%= f.text_field :keywords %> <br />
+  </fieldset>
+  
+  <fieldset>
+    <%= f.label :content, "Content" %> <%= f.text_area :content %> <br />
+  </fieldset>
   
   
   <%= f.submit "Save" %> or  <%= link_to "Cancel", admin_pages_path %>

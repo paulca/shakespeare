@@ -11,6 +11,11 @@ Feature: Managing Pages
     Given I am on the pages admin page
     When I follow "Add a New Page"
       And I fill in "Title" with "Harry and the Hendersons"
+      And I fill in "Keywords" with "80s, movie"
+      And I check "No-index"
+      And I check "No-follow"
+      And I check "Set Canonical Tag?"
+      And I fill in "Canonical URL" with "http://hendersons.com"
       And I press "Save"
     Then I should see "Harry and the Hendersons"
     
