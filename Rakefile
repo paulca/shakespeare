@@ -24,17 +24,17 @@ PKG_FILES = FileList[
 begin
   require 'jeweler'
   Jeweler::Tasks.new do |s|
-    s.name = "behavior"
-    s.version = "0.1.1"
+    s.name = "shakespeare"
+    s.version = "0.1.0"
     s.author = "Paul Campbell"
     s.email = "paul@rslw.com"
-    s.homepage = "http://www.github.com/paulca/behavior"
+    s.homepage = "http://www.github.com/paulca/shakespeare"
     s.platform = Gem::Platform::RUBY
-    s.summary = "A Rails plugin for storing application configuration in the database."
+    s.summary = "A Rails drop in CMS."
     s.files = PKG_FILES.to_a
     s.require_path = "lib"
     s.has_rdoc = false
-    s.extra_rdoc_files = ["README.textile"]
+    s.extra_rdoc_files = ["README.md"]
   end
 rescue LoadError
   puts "Jeweler not available. Install it with: sudo gem install jeweler"
