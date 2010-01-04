@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{shakespeare}
-  s.version = "0.1.0"
+  s.version = "0.1.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Paul Campbell"]
@@ -46,6 +46,7 @@ Gem::Specification.new do |s|
      "lib/shakespeare/view_helpers.rb",
      "rails/init.rb",
      "rerun.txt",
+     "shakespeare.gemspec",
      "spec/blueprints.rb",
      "spec/controllers/admin/pages_controller_spec.rb",
      "spec/database.yml",
