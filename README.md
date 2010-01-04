@@ -47,6 +47,10 @@ In your views, you have access to a number of helpers for generating your page m
 - `robots_meta_tag` generates a <meta> tag for the robots no-index and/or nofollow meta tag options, or returns nil if it's left blank
 - `canonical_link_tag` generates a <link> tag with the canonical URL for the page, if `enable_canonical` is set to true
 
+You also get access to route helpers:
+
+- `admin_pages_path` and `admin_pages_url` point to the pages admin interface
+
 Web Interface
 =============
 
