@@ -5,17 +5,18 @@
 
 Gem::Specification.new do |s|
   s.name = %q{shakespeare}
-  s.version = "0.1.1"
+  s.version = "0.2.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Paul Campbell"]
-  s.date = %q{2010-01-04}
+  s.date = %q{2010-02-15}
   s.email = %q{paul@rslw.com}
   s.extra_rdoc_files = [
     "README.md"
   ]
   s.files = [
-    "README.md",
+    "CHANGELOG",
+     "README.md",
      "Rakefile",
      "app/controllers/admin/pages_controller.rb",
      "app/controllers/pages_controller.rb",
@@ -59,6 +60,7 @@ Gem::Specification.new do |s|
      "spec/spec_helper.rb",
      "spec/view_helpers_spec.rb"
   ]
+  s.has_rdoc = false
   s.homepage = %q{http://www.github.com/paulca/shakespeare}
   s.rdoc_options = ["--charset=UTF-8"]
   s.require_paths = ["lib"]
