@@ -24,5 +24,21 @@ describe Page do
     end
   
   end
+  
+  describe "#set_url" do
+    before do
+      @page = Page.new(:title => "Harry B")
+    end
+    
+    it "should set the URL" do
+      @page.clean_url.should == "harry-b"
+    end
+    
+    it "should save the URL" do
+      @page.save!
+      @page.url.should == 'harry-b'
+    end
+    
+  end
 
 end

@@ -14,7 +14,7 @@ module NavigationHelpers
       admin_pages_path
     when /the page for "([^"]*)"/
       page = Page.find_by_title($1)
-      page_path(page)
+      page_path(page.url)
     
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:

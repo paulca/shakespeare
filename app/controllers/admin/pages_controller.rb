@@ -26,11 +26,11 @@ class Admin::PagesController < ApplicationController
   end
   
   def edit
-    @page = Page.find(params[:id])
+    @page = Page.find_by_url(params[:id])
   end
   
   def update
-    @page = Page.find(params[:id])
+    @page = Page.find_by_url(params[:id])
     if @page.update_attributes(params[:page])
       redirect_to admin_pages_path
     else
@@ -39,7 +39,7 @@ class Admin::PagesController < ApplicationController
   end
   
   def destroy
-    @page = Page.find(params[:id])
+    @page = Page.find_by_url(params[:id])
     @page.destroy
     redirect_to admin_pages_path
   end
