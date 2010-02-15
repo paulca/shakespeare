@@ -1,7 +1,9 @@
 module Shakespeare
   module Helpers
     def self.included(base)
-      base.send(:helper_method, :page_content) if base.respond_to?(:helper_method)
+      if base.respond_to?(:helper_method)
+        base.send(:helper_method, :page_content, :protect_in_production)
+      end
     end
   
     def page_content
