@@ -68,6 +68,19 @@ You can also add before_filters to protect the controller from outsiders:
     
 By default, in production, if `Shakespeare::Settings.before_filters` is empty, `/admin/pages` is protected. You can disable this protection by setting `Behavior::Settings.allow_anonymous` to true.
 
+Format Method
+=============
+
+By default, pages can be accessed at "http://localhost:3000/pages/URL" ... `@page.content` is formatted with Rails's `simple_format` helper.
+
+You can choose not to format it with:
+
+    Shakespeare::Settings.format_method = nil
+    
+Or a choice of your own:
+
+    Shakespeare::Settings.format_method = 'textilize'
+
 Running the tests
 =================
 

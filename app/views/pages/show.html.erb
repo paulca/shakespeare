@@ -1,3 +1,7 @@
 <h2><%= @page.title %></h2>
 
-<%= @page.content %>
+<%- if Shakespeare::Settings.format_method -%>
+  <%= send(Shakespeare::Settings.format_method, @page.content) %>
+<%- else -%>
+  <%= @page.content %>
+<%- end -%>

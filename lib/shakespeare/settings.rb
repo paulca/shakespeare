@@ -24,6 +24,14 @@ module Shakespeare
       def allow_anonymous=(boolean)
         @allow_anonymous = boolean
       end
+      
+      def format_method
+        @format_method ||= 'simple_format'
+      end
+      
+      def format_method=(format_method_choice)
+        @format_method = format_method_choice
+      end
     end
   end
   
