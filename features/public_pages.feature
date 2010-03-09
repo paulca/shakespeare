@@ -10,3 +10,4 @@ Feature: Public Pages
     When I am on the page for "Mr. MacAllister's Christmas"
     
     Then I should see "I was Home Alone"
+      And I should not see "Shakespeare"
