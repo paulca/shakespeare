@@ -12,11 +12,6 @@ class Page < ActiveRecord::Base
     out.join(', ')
   end
   
-  def to_param
-    url.respond_to?(:html_safe) ? url.html_safe : url
-      
-  end
-  
   def clean_url
     title.to_s.downcase.gsub(/[^a-z0-9\s]/, '').gsub(/\s/,'-')
   end

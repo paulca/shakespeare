@@ -1,6 +1,6 @@
 Wed Jun 2 2010
 - - - - - - - -
-- Added support for html_safe
+- Removed to_param on URL
 
 Feb 15 2010
 - - - - - -
