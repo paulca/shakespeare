@@ -25,7 +25,7 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |s|
     s.name = "shakespeare"
-    s.version = "0.3.3"
+    s.version = "0.3.4"
     s.author = "Paul Campbell"
     s.email = "paul@rslw.com"
     s.homepage = "http://www.github.com/paulca/shakespeare"
