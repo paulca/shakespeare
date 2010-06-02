@@ -1,3 +1,7 @@
+Wed Jun 2 2010
+- - - - - - - -
+- Added support for html_safe
+
 Feb 15 2010
 - - - - - -
 - Added find_by_url to pages

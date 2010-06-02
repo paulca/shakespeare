@@ -13,7 +13,8 @@ class Page < ActiveRecord::Base
   end
   
   def to_param
-    url
+    url.respond_to?(:html_safe) ? url.html_safe : url
+      
   end
   
   def clean_url

@@ -18,6 +18,17 @@ Feature: Managing Pages
       And I fill in "Canonical URL" with "http://hendersons.com"
       And I press "Save"
     Then I should see "Harry and the Hendersons"
+  
+  Scenario: Page with 'something/something' URL
+    Given I am on the pages admin page
+    When I follow "Add a New Page"
+      And I fill in "URL" with "home/show"
+      And I fill in "Title" with "A test"
+      And I press "Save"
+      And I follow "Edit"
+      And I fill in "Title" with "It worked!"
+      And I press "Save"
+    Then I should see "It worked!"
     
   Scenario: Edit Page
     Given a page titled "Harry and the Hendersons"
